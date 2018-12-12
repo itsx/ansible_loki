@@ -1,0 +1,13 @@
+---
+
+###
+# GRAFANA LOKI
+###
+
+# Github repository
+loki_github_repo: https://github.com/grafana/loki
+
+# Docker
+
+# Network
+loki_docker_network: loki
