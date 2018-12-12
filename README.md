@@ -1,6 +1,6 @@
-# Ansible : Playbook Docker
+# Ansible : Playbook Loki
 
-The aim of this project is to deploy a Docker instance on Vagrant instances.
+The aim of this project is to deploy Grafana Loki project on Linux Vagrant instance.
 
 ## Getting Started
 
@@ -27,7 +27,7 @@ Be aware that you need to be in the Vagrant directory to be able to run the comm
 
 #### Deployment
 
-To deploy Docker on Vagrant instance, just run this command :
+To deploy Loki on Vagrant instance, just run this command :
 
 ```bash
 $ vagrant up
@@ -40,10 +40,10 @@ $ vagrant status
 
 Current machine states:
 
-docker01                   running (virtualbox)
+loki01                   running (virtualbox)
 ```
 
-If everything run has expected, you should be able to run docker command on the Vagrant instance.
+If everything run has expected, you should be able to access Grafana Web interface and manage the Loki datasource.
 
 #### Destroy
 
@@ -59,15 +59,15 @@ This section list some simple command to use and manage the playbook and the Vag
 
 #### Update with Ansible
 
-To update the Docker instance configuration with Ansible, you just have to run the Ansible playbook docker.yml with this command :
+To update the Loki instance configuration with Ansible, you just have to run the Ansible playbook loki.yml with this command :
 
 ```bash
-$ ansible-playbook docker.yml
+$ ansible-playbook loki.yml
 ```
 
 #### Update with Vagrant
 
-To update the Docker instance configuration with Vagrant, you just have to run provisioning part of the Vagrant file :
+To update the Loki instance configuration with Vagrant, you just have to run provisioning part of the Vagrant file :
 
 ```bash
 $ vagrant provision
@@ -78,7 +78,7 @@ $ vagrant provision
 To be able to connect to a Vagrant instance, you should use the CLI which is configured to automatically use the default SSH key :
 
 ```bash
-$ vagrant ssh docker01
+$ vagrant ssh loki01
 ```
 
 ## Author
