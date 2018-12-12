@@ -3,7 +3,7 @@
 
 # List of supported operating systems
 SUPPORTED_OS = {
-  "debian"   => {box: "debian/jessie64", bootstrap_os: "debian", user: "vagrant"},
+  "debian"   => {box: "debian/stretch64", bootstrap_os: "debian", user: "vagrant"},
   "ubuntu"   => {box: "ubuntu/bionic64", bootstrap_os: "ubuntu", user: "vagrant"},
   "centos"   => {box: "centos/7",        bootstrap_os: "centos", user: "vagrant"}
 }
@@ -57,8 +57,7 @@ Vagrant.configure("2") do |config|
       server.vm.network "private_network", ip: "#{$subnet}#{i}"
 
       host_vars[vm_name] = {
-        "ip": "#{$subnet}#{i}",
-        "myid": "#{i}"
+        "ip": "#{$subnet}#{i}"
       }
 
       # Provision
